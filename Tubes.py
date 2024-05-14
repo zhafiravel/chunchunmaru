@@ -17,3 +17,12 @@ def tambah_item(items):
             daftar_harga[item] = int(harga)
             print(f"{item} telah ditambahkan ke daftar belanjaan dengan harga {harga}.")
     sortir_belanjaan()
+
+# Fungsi untuk mencari item dalam daftar belanjaan
+# Aulia Jasifa BR Ginting (2311104060)
+def cari_item(item):
+    item = item.capitalize()  # Kapitalisasi huruf pertama
+    if item in daftar_belanjaan:
+        print(f"{item} ada dalam daftar belanjaan dengan harga {daftar_harga[item]}.")
+    else:
+        print(f"{item} tidak ada dalam daftar belanjaan.")
