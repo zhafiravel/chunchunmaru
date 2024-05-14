@@ -60,4 +60,27 @@ def tampilkan_daftar():
 def sortir_belanjaan():
     daftar_belanjaan.sort()
 
+# Dimastian Aji Wibowo (2311104058)
+# Fungsi untuk menghitung jumlah total item dalam daftar belanjaan
+def hitung_jumlah_item():
+    jumlah_item = len(daftar_belanjaan)
+    print(f"Jumlah total item dalam daftar belanjaan adalah {jumlah_item}.")
+
+# Fungsi untuk menghitung total harga semua item dalam daftar belanjaan
+# Dimastian Aji Wibowo (2311104058)
+def hitung_total_harga():
+    total_harga = sum(daftar_harga[item] for item in daftar_belanjaan)
+    print(f"Total harga semua item dalam daftar belanjaan adalah {total_harga}.")
+
+# Fungsi untuk meminta input ulang jika input salah
+# Dimastian Aji Wibowo (2311104058)
+def input_ulang(prompt):
+    while True:
+        data = input(prompt)
+        if data.strip():  # Memastikan input tidak kosong
+            return data
+        else:
+            print("Input tidak valid. Silakan coba lagi.")
+
+
 
