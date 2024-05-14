@@ -37,3 +37,27 @@ def hapus_item(item):
         print(f"{item} telah dihapus dari daftar belanjaan.")
     else:
         print(f"{item} tidak ada dalam daftar belanjaan.")
+
+# Fungsi untuk menghapus semua item dari daftar belanjaan
+# Zhafir Zaidan Avail (2311104059)
+def hapus_semua_item():
+    daftar_belanjaan.clear()
+    daftar_harga.clear()
+    print("Semua item telah dihapus dari daftar belanjaan.")
+
+# Fungsi untuk menampilkan daftar belanjaan
+# Zhafir Zaidan Avail (2311104059)
+def tampilkan_daftar():
+    if not daftar_belanjaan:
+        print("Daftar belanjaan kosong.")
+    else:
+        print("Daftar Belanjaan:")
+        for item in daftar_belanjaan:
+            print(f"- {item}: {daftar_harga[item]}")
+
+# Fungsi untuk menyortir daftar belanjaan
+# Zhafir Zaidan Avail (2311104059)
+def sortir_belanjaan():
+    daftar_belanjaan.sort()
+
+
