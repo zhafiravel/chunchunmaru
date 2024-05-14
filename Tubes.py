@@ -82,5 +82,48 @@ def input_ulang(prompt):
         else:
             print("Input tidak valid. Silakan coba lagi.")
 
+# Fungsi utama
+# Putra Strata Tandika Setyawan (2311104050)
+def main():
+    while True:
+        print("\nPilihan:")
+        print("1. Tambah item")
+        print("2. Hapus item")
+        print("3. Cari item")
+        print("4. Tampilkan daftar belanjaan")
+        print("5. Hapus semua item dari daftar belanjaan")
+        print("6. Hitung jumlah total item")
+        print("7. Hitung total harga")
+        print("8. Keluar")
+
+        pilihan = input_ulang("Masukkan pilihan Anda: ")
+
+        if pilihan == "1":
+            items = input_ulang("Masukkan nama item (pisahkan dengan koma untuk menambahkan beberapa item sekaligus): ")
+            tambah_item(items)
+        elif pilihan == "2":
+            item = input_ulang("Masukkan nama item yang ingin dihapus: ")
+            hapus_item(item)
+        elif pilihan == "3":
+            item = input_ulang("Masukkan nama item yang ingin dicari: ")
+            cari_item(item)
+        elif pilihan == "4":
+            tampilkan_daftar()
+        elif pilihan == "5":
+            hapus_semua_item()
+        elif pilihan == "6":
+            hitung_jumlah_item()
+        elif pilihan == "7":
+            hitung_total_harga()
+        elif pilihan == "8":
+            print("Terima kasih, sampai jumpa!")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan coba lagi.")
+
+# Menjalankan program utama
+if _name_ == "_main_":
+    main()
+
 
 
