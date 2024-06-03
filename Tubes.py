@@ -5,9 +5,9 @@ daftar_harga = {}
 # Fungsi untuk menambahkan item ke daftar belanjaan
 # Putra Strata Tandika Setyawan (2311104050)
 def tambah_item(items):
-    new_items = items.split(",")  # Pisahkan item yang dimasukkan dengan koma
+    new_items = items.split(",")  # Pisahin item pakai koma
     for item in new_items:
-        item = item.strip().capitalize()  # Hilangkan spasi di awal dan akhir item dan kapitalisasi huruf pertama
+        item = item.strip().capitalize()  # Ngilangin Spasi biar ga eror kalo ada spasi sama bikin huruf awal biar kapital
         if item:
             harga = input_ulang(f"Masukkan harga untuk {item}: ")
             while not harga.isdigit():
@@ -21,7 +21,7 @@ def tambah_item(items):
 # Fungsi untuk mencari item dalam daftar belanjaan
 # Aulia Jasifa BR Ginting (2311104060)
 def cari_item(item):
-    item = item.capitalize()  # Kapitalisasi huruf pertama
+    item = item.capitalize()  # Mengkapitalkan huruf pertama
     if item in daftar_belanjaan:
         print(f"{item} ada dalam daftar belanjaan dengan harga {daftar_harga[item]}.")
     else:
@@ -30,7 +30,7 @@ def cari_item(item):
 # Fungsi untuk menghapus item dari daftar belanjaan
 # Alya Rabani (2311104076)
 def hapus_item(item):
-    item = item.capitalize()  # Kapitalisasi huruf pertama
+    item = item.capitalize()
     if item in daftar_belanjaan:
         daftar_belanjaan.remove(item)
         del daftar_harga[item]
@@ -77,7 +77,7 @@ def hitung_total_harga():
 def input_ulang(prompt):
     while True:
         data = input(prompt)
-        if data.strip():  # Memastikan input tidak kosong
+        if data.strip():
             return data
         else:
             print("Input tidak valid. Silakan coba lagi.")
